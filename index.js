@@ -6,7 +6,7 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 const fs  =require('fs')
 var path = require("path");
-
+let port = process.env.PORT || 5050;
 
 
 app.get('/',(req,res)=>{
@@ -48,6 +48,6 @@ io.on('connection', (socket) => {
       });
   });
 
-server.listen(5050,()=>{
+server.listen(port,()=>{
     console.log("listening on 5050")
 })
