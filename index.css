@@ -1,0 +1,101 @@
+/* body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+#form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+#input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+#input:focus { outline: none; }
+#form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+
+#messages { list-style-type: none; margin: 0; padding: 0; }
+#messages > li { padding: 0.5rem 1rem; }
+#messages > li:nth-child(odd) { background: #efefef; } */
+body{
+    background: #212529;
+
+}
+.container{
+    height: 100vh;
+}
+.card{
+    height: 500px;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.messages{
+    height: 400px;
+    overflow-y: auto;
+    flex-direction: column-reverse;
+    display: flex;
+}
+.messages::-webkit-scrollbar {
+    width: 10px;
+  }
+  .messages::-webkit-scrollbar-track {
+  background: #2D4263;
+}
+.messages::-webkit-scrollbar-thumb {
+    background: rgb(23, 105, 144);
+  }
+  .messages::-webkit-scrollbar-thumb:hover {
+    background: rgb(105, 124, 133);
+  }
+#messages > li{
+    /* background: #ababd4; */
+    width: auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#messages  > li:nth-child(odd){
+    /* background: #ababd4; */
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#messages  > li:nth-child(even){
+    /* background: #3d3dea; */
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.username{
+    color: grey;
+    font-size: 12px;
+    border-bottom: 1px solid black;
+    width: fit-content;
+    padding-bottom: 5px;
+}
+.username:after{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 4px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    background-color: #3fb226;
+}
+.msginput{
+    background: transparent;
+    border: 0 solid grey;
+    color:grey;
+}
+.mspinput:active, .msginput:focus{
+    background-color: #0e3345 !important;
+    color: white;
+}
+.sendbtn{
+    background-color: #04293A;
+    padding: 5px 10px;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+.sendbtn:hover{
+    background-color: #1e6180;
+    color: white;
+}
